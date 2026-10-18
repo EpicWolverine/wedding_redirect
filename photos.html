@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Megan & Brendan's Wedding Photos</title>
+<style>
+    :root {
+        --blue-ink: #273b61;
+        --blue-link: #385b91;
+        --purple-accent: #684696;
+        --muted-ink: #66728a;
+    }
+
+    body {
+        margin: 0;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+    }
+
+    h1 {
+        color: var(--blue-ink);
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        width: min(100%, 1200px);
+        margin: 0 auto;
+        padding: 0 1rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .gallery img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery a {
+        display: block;
+        color: var(--blue-link);
+        text-decoration: none;
+    }
+
+    .gallery h3 {
+        color: var(--blue-ink);
+    }
+
+    .gallery h4 {
+        color: var(--muted-ink);
+        font-weight: 400;
+    }
+
+    .gallery a:hover h3 {
+        color: var(--purple-accent);
+        text-decoration: underline;
+        text-decoration-color: var(--purple-accent);
+        text-underline-offset: 0.18em;
+    }
+
+    .gallery a:focus-visible {
+        outline: 2px solid var(--purple-accent);
+        outline-offset: 4px;
+        border-radius: 2px;
+    }
+
+    @media (max-width: 600px) {
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<body>
+    <h1>Megan & Brendan's Wedding Photos</h1>
+    <div class="gallery">
+        <section>
+            <a href="https://timfullerphotography.smugmug.com/Weddings/Weddings/Megan-Brendan/n-TnrptS">
+                <h3>Professional Photos from MI Catholic Wedding</h3>
+                <h4>Password: M&B</h4>
+                <img src="TF3_0978-X3.jpg" alt="Professional wedding photo of the consecration">
+            </a>
+        </section>
+        <section>
+            <a href="https://photos.app.goo.gl/SAzD3uZnC5PtacY57">
+                <h3>Guest Photos</h3>
+                <h4>Please upload your photos here!</h4>
+                <img src="IMG_4447.jpg" alt="Selfie at the UM-Dearborn Fieldhouse">
+            </a>
+        </section>
+    </div>
+</body>
