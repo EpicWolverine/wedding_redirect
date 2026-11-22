@@ -30,25 +30,61 @@
         box-sizing: border-box;
     }
 
-    .gallery img {
-        display: block;
-        width: 100%;
-        height: auto;
+    .gallery section,
+    .gallery a {
+        height: 100%;
     }
 
     .gallery a {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: var(--blue-link);
         text-decoration: none;
     }
 
+    .gallery img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-top: auto;
+    }
+
     .gallery h3 {
         color: var(--blue-ink);
+        margin: 0.5rem 0 0.15rem;
     }
 
     .gallery h4 {
         color: var(--muted-ink);
         font-weight: 400;
+        margin: 0 0 1rem;
+    }
+
+    .gallery .gallery-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3rem;
+        width: fit-content;
+        box-sizing: border-box;
+    }
+
+    .gallery .password-required {
+        margin: 0 0 1rem;
+        padding: 0.65rem 0.85rem;
+        border: 2px solid var(--purple-accent);
+        border-radius: 6px;
+        color: #fff;
+        background: var(--purple-accent);
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.35;
+    }
+
+    .password-required strong {
+        font-size: 1.15em;
+        letter-spacing: 0.04em;
     }
 
     .gallery a:hover h3 {
@@ -68,6 +104,10 @@
         .gallery {
             grid-template-columns: 1fr;
         }
+
+        .gallery .gallery-subtitle {
+            min-height: 0;
+        }
     }
 </style>
 <body>
@@ -76,14 +116,14 @@
         <section>
             <a href="https://timfullerphotography.smugmug.com/Weddings/Weddings/Megan-Brendan/n-TnrptS">
                 <h3>Professional Photos from MI Catholic Wedding</h3>
-                <h4>Password: M&B</h4>
+                <h4 class="password-required">If asked, enter password: <strong>M&amp;B</strong></h4>
                 <img src="TF3_0978-X3.jpg" alt="Professional wedding photo of the consecration">
             </a>
         </section>
         <section>
             <a href="https://photos.app.goo.gl/SAzD3uZnC5PtacY57">
                 <h3>Guest Photos</h3>
-                <h4>Please upload your photos here!</h4>
+                <h4 class="gallery-subtitle">Please upload your photos here!</h4>
                 <img src="IMG_4447.jpg" alt="Selfie at the UM-Dearborn Fieldhouse">
             </a>
         </section>
